@@ -452,13 +452,6 @@ function drawUI() {
     textSize(14);
     let pointsNeeded = 10 - score;
     text("Need " + pointsNeeded + " more point" + (pointsNeeded !== 1 ? "s" : "") + " to win!", width/2, 25);
-    
-    // Low health warning
-    if (health <= 2 && gameActive) {
-        fill(255, 0, 0, 150 + sin(frameCount * 0.1) * 50);
-        textSize(16);
-        text("⚠️ LOW HEALTH! ⚠️", width/2, 85);
-    }
 }
 
 function drawGameOverlay() {
