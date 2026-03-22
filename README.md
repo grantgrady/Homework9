@@ -107,7 +107,7 @@ All code was written by me, with AI assistance for debugging and conceptual guid
 - Add particle effects for collection events
 
 
-## 🎓 Assignment Requirements Checklist
+## ✅ Assignment Requirements Checklist
 
 - ✅ **p5.play Animations**: Animated sprite with idle and walk cycles
 - ✅ **Player Movement**: WASD and Arrow keys with responsive controls
