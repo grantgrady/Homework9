@@ -120,7 +120,3 @@ All code was written by me, with AI assistance for debugging and conceptual guid
 - ✅ **Health Display**: Visual heart system
 - ✅ **Game States**: Clear win/lose screens with restart option
 
-
-## 📄 License
-
-This project was created for educational purposes as part of a course assignment.
