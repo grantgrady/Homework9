@@ -5,7 +5,7 @@
 ## Project Overview
 A 2D game created using the p5.play library for a game development assignment. The player controls a character who must collect golden stars while avoiding purple skulls and navigating around obstacles.
 
-## 🎮 Game Description
+## Game Description
 
 In this game, you control a character in a colorful world. Your goal is to collect 10 healthy to win while maintaining your health. Touching harmful items reduces your health by 1, and you start with 5 health. The game ends when you either reach 10 points (win) or your health reaches 0 (lose).
 
@@ -18,7 +18,7 @@ In this game, you control a character in a colorful world. Your goal is to colle
 - **Visual Health System**: Heart icons display your current health
 - **Win/Lose Conditions**: Clear game ending with victory or defeat messages
 
-## 🎯 How to Play
+## How to Play
 
 1. Use **WASD** or **Arrow Keys** to move your character
 2. Collect **yellow squares** to increase your score (+1 each)
@@ -52,7 +52,7 @@ In this game, you control a character in a colorful world. Your goal is to colle
 - Different colored sprites drawn with p5 shape functions
 - Health display using heart emojis with color coding
 
-## 💭 Reflection
+## Reflection
 
 ### Development Process
 
@@ -68,11 +68,9 @@ I used Generative AI (specifically DeepSeek) as a **development assistant** thro
 
 1. **Debugging Help**: When I encountered the keyboard input issue, I asked the AI to help debug why `kb.pressing()` wasn't working. The AI suggested adding console logs and eventually helped me implement manual keyboard listeners as a solution.
 
-2. **Code Structure Guidance**: I asked for help organizing the code to meet the assignment requirements, ensuring all features were properly implemented and commented.
+2. **Error Resolution**: When I got errors like "sprite.immovable is deprecated", the AI helped update the syntax to use `collider = 'static'` instead, which is correct for p5.play v3.
 
-3. **Error Resolution**: When I got errors like "sprite.immovable is deprecated", the AI helped update the syntax to use `collider = 'static'` instead, which is correct for p5.play v3.
-
-4. **Animation Implementation**: I requested assistance in creating programmatic animations without external images, and the AI provided the frame creation logic using p5.Graphics objects.
+3. **Animation Implementation**: I requested assistance in creating programmatic animations without external images, and the AI provided the frame creation logic using p5.Graphics objects.
 
 **How I see others using Gen AI**:
 - **Learning Tool**: New developers can use AI to explain concepts and provide examples
@@ -95,7 +93,7 @@ I did not directly copy code from other projects or individuals. However, I did 
 All code was written by me, with AI assistance for debugging and conceptual guidance, ensuring it meets the assignment requirements while being original work.
 
 
-## 🐛 Known Issues & Future Improvements
+## Known Issues & Future Improvements
 
 **Current Limitations**:
 - Player can sometimes get stuck on obstacles due to physics friction
@@ -107,16 +105,16 @@ All code was written by me, with AI assistance for debugging and conceptual guid
 - Add particle effects for collection events
 
 
-## ✅ Assignment Requirements Checklist
+## Assignment Requirements Checklist
 
-- ✅ **p5.play Animations**: Animated sprite with idle and walk cycles
-- ✅ **Player Movement**: WASD and Arrow keys with responsive controls
-- ✅ **Immovable Objects**: 5 static obstacles at random positions
-- ✅ **Collectible Items**: 8 golden shapes that respawn on collection
-- ✅ **Bad Items**: 5 purple shapes that decrease health
-- ✅ **Win Condition**: Score reaches 10 points
-- ✅ **Lose Condition**: Health reaches 0
-- ✅ **Score Display**: Real-time score counter
-- ✅ **Health Display**: Visual heart system
-- ✅ **Game States**: Clear win/lose screens with restart option
+-  **p5.play Animations**: Animated sprite with idle and walk cycles
+-  **Player Movement**: WASD and Arrow keys with responsive controls
+-  **Immovable Objects**: 5 static obstacles at random positions
+-  **Collectible Items**: 8 golden shapes that respawn on collection
+-  **Bad Items**: 5 purple shapes that decrease health
+-  **Win Condition**: Score reaches 10 points
+-  **Lose Condition**: Health reaches 0
+-  **Score Display**: Real-time score counter
+-  **Health Display**: Visual heart system
+-  **Game States**: Clear win/lose screens with restart option
 
