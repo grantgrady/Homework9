@@ -105,12 +105,10 @@ function setup() {
     canvas.parent('gameCanvas');
     frameRate(60);
     
-    // Get UI elements
     scoreDisplay = select('#scoreValue');
     healthDisplay = select('#healthValue');
     select('#restartBtn').mousePressed(() => restartGame());
     
-    // Create player sprite
     player = new Sprite();
     player.width = 38;
     player.height = 48;
@@ -120,7 +118,6 @@ function setup() {
     player.friction = 0.95;
     player.rotationLock = true;
     
-    // ========== 3. Immovable Objects (Obstacles) ==========
     for (let i = 0; i < 5; i++) {
         let obstacle = new Sprite(random(70, width - 70), random(80, height - 90), 48, 48);
         obstacle.collider = 'static';
@@ -130,12 +127,10 @@ function setup() {
         obstacles.push(obstacle);
     }
     
-    // ========== 4. Collectible Items ==========
     for (let i = 0; i < 8; i++) {
         createCollectible();
     }
     
-    // ========== 5. Bad Items ==========
     for (let i = 0; i < 5; i++) {
         createBadItem();
     }
@@ -160,7 +155,6 @@ function handleKeyDown(event) {
         event.preventDefault();
     }
     
-    // Set key state
     if (key === 'w' || key === 'W') keys.w = true;
     if (key === 'a' || key === 'A') keys.a = true;
     if (key === 's' || key === 'S') keys.s = true;
@@ -330,7 +324,6 @@ function handleMovement() {
     if (keys.d || keys.ArrowRight) moveX += 1;
     
     if (moveX !== 0 || moveY !== 0) {
-        // Normalize diagonal movement
         let len = Math.hypot(moveX, moveY);
         moveX /= len;
         moveY /= len;
@@ -426,7 +419,6 @@ function drawAnimatedPlayer() {
 }
 
 function drawUI() {
-    // Hearts
     textAlign(LEFT);
     for (let i = 0; i < 5; i++) {
         if (i < health) {
@@ -440,13 +432,11 @@ function drawUI() {
         }
     }
     
-    // Score
     fill(255, 215, 0);
     textSize(28);
     textAlign(RIGHT);
     text("SCORE: " + score + " / 10", width - 20, 45);
     
-    // Progress
     textAlign(CENTER);
     fill(255);
     textSize(14);
@@ -463,7 +453,7 @@ function drawGameOverlay() {
     if (gameResult === "win") {
         fill(255, 215, 0);
         textSize(56);
-        text("🎉 YOU WIN! 🎉", width/2, height/2 - 50);
+        text("YOU WIN! 🎉", width/2, height/2 - 50);
         fill(255);
         textSize(28);
         text("Final Score: " + score, width/2, height/2 + 20);
@@ -472,7 +462,7 @@ function drawGameOverlay() {
     } else if (gameResult === "lose") {
         fill(255, 80, 80);
         textSize(56);
-        text("💀 GAME OVER 💀", width/2, height/2 - 50);
+        text("GAME OVER 💀", width/2, height/2 - 50);
         fill(255);
         textSize(28);
         text("You collected " + score + " points", width/2, height/2 + 20);
@@ -540,7 +530,6 @@ function restartGame() {
     isMoving = false;
 }
 
-// Clean up event listeners when page unloads (optional)
 window.addEventListener('beforeunload', function() {
     window.removeEventListener('keydown', handleKeyDown);
     window.removeEventListener('keyup', handleKeyUp);
